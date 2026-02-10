@@ -14,14 +14,6 @@ else
     git clone https://github.com/aidando73/agent-docs.git agent-docs
 fi
 
-if [ -d "dotfiles" ]; then
-    echo "dotfiles/ already exists, pulling latest..."
-    git -C dotfiles pull
-else
-    echo "Cloning dotfiles..."
-    gh repo clone aidando73/dotfiles dotfiles
-fi
-
 echo "Copying user skills to ~/.cursor/skills/"
 mkdir -p ~/.cursor/skills/
 cp -r agent-docs/user_skills/* ~/.cursor/skills/
